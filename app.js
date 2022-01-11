@@ -15,8 +15,12 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost:27017/todolistDB");
+const mongoURI = "mongodb+srv://nikhilstacks:test123@cluster0.rzizx.mongodb.net/todolistDB?retryWrites=true&w=majority";
 
+mongoose.connect(mongoURI, {
+useNewUrlParser: true,
+useUnifiedTopology: true,
+});
 const itemsSchema = {
   name: String
 };
