@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-const mongoURI = "mongodb+srv://nikhilstacks:test123@cluster0.rzizx.mongodb.net/todolistDB?retryWrites=true&w=majority";
+const mongoURI = "mongodb+srv://nikhilstacks:<password>@cluster0.rzizx.mongodb.net/todolistDB?retryWrites=true&w=majority";
 
 mongoose.connect(mongoURI, {
 useNewUrlParser: true,
